@@ -20,8 +20,11 @@ class ga_selection:
     def __init__(self):
         pass
     
-    def pop_generation(self):
-        pass
+    def pop_generation(self, data, pop_size = 10):
+        # Generate initial population
+        qtd_var = data.shape[1] - 1
+        pop = np.random.randint(2, size=(pop_size, qtd_var))
+        return(pop)
     
     def cal_regression(self):  
         # Function to calculate fiting model for regression 
